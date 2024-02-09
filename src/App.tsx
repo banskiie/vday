@@ -43,17 +43,19 @@ const App = () => {
           <>
             <img
               src={
-                valentineArray?.find(
-                  (item: any, index: number) => index === noCount
-                )?.image
+                valentineArray?.find((item: any, index: number) => {
+                  console.log(item)
+                  return index === noCount
+                })?.image
               }
               style={{ height: 300 }}
             />
             <Typography variant="h2" textAlign="center" fontWeight={600}>
               {
-                valentineArray?.find(
-                  (item: any, index: number) => index === noCount
-                )?.text
+                valentineArray?.find((item: any, index: number) => {
+                  console.log(item)
+                  return index === noCount
+                })?.text
               }
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
